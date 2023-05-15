@@ -1,0 +1,36 @@
+@media screen and (max-width:768px){
+.container{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;  
+}}
+
+@media  screen and (min-width:480px) 
+{
+ .container {
+    width: 480px;
+    margin: 0 auto;
+ }   
+}
+@media screen and (min-width:768px){
+.container {
+        width: 768px;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width:1200px){
+.container {
+    
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+//
+/* портфолилио??*/
+/*.conteiner-main-portfolio {
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}*/

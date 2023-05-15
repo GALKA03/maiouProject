@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: rgb(112, 109, 109);
+    background: linear-gradient(180deg, rgba(112, 109, 109, 0.9585084033613446) 0%, rgba(228, 228, 228, 0.9360994397759104) 96%);
+  }
+main {
+  padding: 20px;
+
+}
+
+header,
+footer {
+  min-height: 200px;
+}
+
+header {
+  background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5));
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+footer {
+  background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5));
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}

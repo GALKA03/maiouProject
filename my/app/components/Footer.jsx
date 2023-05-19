@@ -1,23 +1,5 @@
-
+import s from "../styles/layout/footer.module.scss"
 import Image from "next/image";
-import FacebookSharpIcon from '@mui/icons-material/FacebookSharp';
-// import { socials } from "../api/data/socials";
-// export const getStaticProps = async () => {
-//   try {
-//     const response = await fetch(`/my/app/api/socials`);
-//     // if (!response.ok) {
-//     //   throw new Error('Failed to fetch socials');
-//     // }
-//     const data = await response.json();
-//     console.log('data',data)
-//     return { props: { socials: data } };
-
-//   } catch (error) {
-//     console.error(error);
-//     return { props: { socials: null } };
-//   }
-// };
-
 
  const Footer = ({ socials }) => {
 //     if (!socials) {
@@ -25,18 +7,32 @@ import FacebookSharpIcon from '@mui/icons-material/FacebookSharp';
 //   }
     // const { id, icon, path } = socials;
 const socialMediaIcons = [
-    { id: 1, icon: "/SVG/instagram.svg", alt: "Instagram" },
-    { id: 2, icon: "/SVG/twitter.svg", alt: "Twitter" },
-    { id: 3, icon: "/SVG/facebook.svg", alt: "Facebook" },
-    { id: 4, icon: "/SVG/linkedin.svg", alt: "LinkedIn" },
+    { id: 1, icon: "/Subtract.png", alt: "WhatsApp",href:"#" },
+    { id: 2, icon: "/Telegramm.png", alt: "Telegramm" ,href:"#"},
+    { id: 3, icon: "/Viber.png", alt: "Viber" ,href:"#"},
+    { id: 4, icon: "/Skype.png", alt: "Skype" ,href:"#" },
   ];
 
-  return (
-    <div className="py-20 flex  p-10 justify-around items-center flex-wrap text-white">
-      <div className="footer-conteiner__contacts">
-        <a href="WebStudio" lang="en" className="footer__webstudio">
-          <span className="footer__web">Web</span>Studio
-        </a>
+   return (
+    <>
+     {/* <div className="py-20 flex  p-10 justify-around items-center flex-wrap text-white text-lg"> */}
+      <div>LOGO</div>
+     
+      <div className="social-end">
+        <ul className="flex justify-between items-center">
+          {socialMediaIcons.map(({ id, icon, alt,href }) => {
+             return (
+               <li key={id} className="mr-10">
+                 <a href={href} className={s.link_bg}>
+              <Image src={icon} alt={alt} width={id===4 ?50 :40} height={40} />
+           {/* {id === 1 || id === 2 ? 150 : id === 3 || id === 4 ? 300 : id === 5 ? 400 : 100} */}
+                 </a> </li>
+             )
+               })}
+        </ul>
+       </div>
+        <div className="footer-conteiner__contacts">
+  
         <address className="footer__address">
           <ul className="footer__list list">
             <li className="footer__item">
@@ -62,22 +58,7 @@ const socialMediaIcons = [
           </ul>
         </address>
       </div>
-      <div className="social-end">
-        <h3 className="social-end__title">присоединяйтесь</h3>
-        <ul className="flex justify-between items-center">
-                  {/* <li key={id}>
-               <a href=""></a>        */}
-         {/* </li> */}
-                  {/* socials.map(({ id, icon }) => (
-             <li key={id}>
-          <a href={path} target="_blank" rel="noopener noreferrer">
-            <i className={`fab fa-${icon}`} aria-hidden="true" />
-          </a>
-        </li>
-          )) */}
-        </ul>
-      </div>
-    </div>
+</>
   );
 };
 

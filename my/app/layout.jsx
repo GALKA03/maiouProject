@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
               background: "#666",
               boxShadow: "0 1px 1px 0 rgba(0, 0, 0, 0.12)",
             }}
-            className="w-full h-full  "
+            className="w-full h-full py-20 flex  p-10 justify-around items-center flex-wrap text-white text-lg"
           >
           <Footer />
           </footer>

@@ -1,6 +1,8 @@
+import AboutSection from "../components/AboutSection"
+
 const Siamo = () => {
     return (
-        <div>SIAMO</div>
+       <AboutSection/>
     )
 }
 export default Siamo

@@ -1,8 +1,10 @@
-export {Heading} from "../components/Heading"
+import {Heading} from "../components/Heading"
+import AdressComponent from "./AdressComponent"
 const Contatti = () => {
 
     return (
-       <>Contatti</>)
+     <AdressComponent/> 
+    )
        
 }
 export default Contatti

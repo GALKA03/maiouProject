@@ -33,37 +33,37 @@ const Garanty = () => {
     {
       id: 4,
       src: "/garanty/garanty4.png",
-      alt: "done all",
-      title: "Professionale",
-      description: "squadra",
+      alt: "Consegna",
+      title: "Consegna ",
+      description: "prodotti",
         },
     {
       id: 5,
       src: "/garanty/garanty5.png",
       alt: "done all",
-      title: "Professionale",
-      description: "squadra",
+      title: "Ordini",
+      description: "da 10 mq. M.",
           },
      {
       id: 6,
       src: "/garanty/garanty6.png",
       alt: "done all",
-      title: "Professionale",
-      description: "squadra",
+      title: "misurazioni",
+      description: "con partenza",
           },
       {
       id: 7,
       src: "/garanty/garanty7.png",
       alt: "done all",
-      title: "Professionale",
-      description: "squadra",
+      title: "Tutta la vita",
+      description: "garanzia",
           },
        {
       id: 8,
       src: "/garanty/garanty8.png",
       alt: "done all",
-      title: "Professionale",
-      description: "squadra",
+      title: "Gratuito",
+      description: "misurazioni",
           }
       ]
     

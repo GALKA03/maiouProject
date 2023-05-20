@@ -1,6 +1,6 @@
 import s from "../styles/layout/footer.module.scss"
 import Image from "next/image";
-import { Facebook,Linkedin,Twitter,Instagram } from "./svgs";
+import { Facebook,Linkedin,Twitter,Instagram , MapPin} from "./svgs";
 // npm uninstall expressexport {facebook} from "../../public/SVG/facebook.svg";
  const Footer = () => {
 //     if (!socials) {
@@ -52,9 +52,11 @@ const socialMediaIcons = [
                 href="https://goo.gl/maps/JEW9ovbfu2PFGyKFA"
                 target="_blank"
                 rel="noopener nofollow noreferrer"
-                className="futer__maps"
+                className="flex"
               >
-                г.Киев, пр-т Леси Украинки,26
+                 
+                 г.Киев, пр-т Леси Украинки,26
+                 <MapPin className="ml-2" />
               </a>
             </li>
             <li className="footer__item">

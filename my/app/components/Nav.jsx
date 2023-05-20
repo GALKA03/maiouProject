@@ -10,19 +10,19 @@ const Nav = () => {
         alt="logo"
         width={160}
         height={160}
-        className="object_contain me-auto"
+        className="object_contain me-auto animate-pulse"
       /></div>
       <nav className="text-xl  font-semibold text-cyan-50 w-full h-24 flex flex-wrap justify-center items-center w-8/12">
        
-            <Link href="/" className="  w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900">
+            <Link href="/" className="transition duration-500  w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900">
               HOME
             </Link>
          
-            <Link href="/siamo" className="w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900">CHI SIAMO</Link>{" "}
+            <Link href="/siamo" className="transition duration-500 w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900">CHI SIAMO</Link>{" "}
         
-            <Link href="/progetti" className="w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900 ">PROGETTI</Link>{" "}
+            <Link href="/progetti" className="transition duration-500 w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900 ">PROGETTI</Link>{" "}
           
-            <Link href="/contatti" className="w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 py-40px hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900">CONTATTACI</Link>
+            <Link href="/contatti" className="transition duration-500 w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 py-40px hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900">CONTATTACI</Link>
           
           </nav>
     

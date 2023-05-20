@@ -2,7 +2,7 @@ import Image from "next/image";
 const Productions = () => {
   const styling = {
     backgroundColor: "rgba(77, 73, 73, 0.64)",
-    background: " url('/productions/bg2x.jpg')",
+   background: "linear-gradient(193deg, rgba(34, 33, 33, 0.91), rgba(77, 73, 73, 0.34) 16%, rgba(88, 87, 87, 0.28)), url('/productions/bg2x.jpg')",
     width: "100%",
     height: "100%",
     backgroundRepeat: "no-repeat",
@@ -23,6 +23,7 @@ const Productions = () => {
             width={200}
             height={60}
             className="mb-10"
+
           />
         </li>
         <li>

@@ -5,7 +5,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.486);
     cursor: pointer;
 
     transition-property: background-color;
@@ -15,7 +15,7 @@
 
     &:hover,
     &:focus {
-        background-color: var(--color-logo);
+        background-color: rgba(72, 59, 255, 0.486);
 
         &:not(:last-child) {
             margin-bottom: 8px;

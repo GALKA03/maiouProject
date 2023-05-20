@@ -11,7 +11,7 @@ const partners = [
 
 const styling = {
     backgroundColor: "rgba(77, 73, 73, 0.64)",
-    background: "linear-gradient(193deg, rgba(34, 33, 33, 0.91)16%, rgba(77, 73, 73, 0.74) 46%, rgba(88, 87, 87, 0.68)), url('/productions/bg2x.jpg')",
+    background: " url('/productions/bg2x.jpg')",
     width: "100%",
     height: "100%",
     backgroundRepeat: "no-repeat",
@@ -20,9 +20,9 @@ const styling = {
   };
   return (
     <section style={styling} className="w-full h-full">
-          <ul className=" flex item-baseline justify-between flex-wrap py-20 px-10 ">
+          <ul className=" flex item-baseline justify-between flex-wrap py-10 px-10 ">
               {partners.map(({ id, src, alt, href }) => (
-                  <li key={id} >
+                  <li key={id} className="py-10 hover:scale-125 transition duration-500" >
                       <a href={href} >
                           <Image src={src} alt={alt}  width={id === 1 || id === 2 ? 150 : id === 3 || id === 4 ? 300 : id === 5 ? 400 : 100} height={20} />
                       </a>

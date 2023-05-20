@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="it">
       <body>
-        <div className="p-4 overflow-y-auto whitespace-nowrap">
+        <div className="w-full h-full">
           <header className="flex  bg-cyan-800 justify-between">
             <Nav />
           </header>

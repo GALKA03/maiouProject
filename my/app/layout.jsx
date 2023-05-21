@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="it">
       <body>
         <div className="w-full h-full">
-          <header className="flex  bg-cyan-800 justify-between">
+          <header className=" block md:flex  bg-cyan-800 justify-between">
             <Nav />
           </header>
           <main className="p-0">{children}</main>

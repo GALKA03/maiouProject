@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Hero from './components/Hero'
 import Garanty from './components/Garanty'
 import PartnersSections from './components/PartnersSection'
-import AboutSection from './components/AboutSection'
+import AboutSection from './siamo/AboutSection'
 import Productions from './components/Productions'
 export default function Home() {
   return (

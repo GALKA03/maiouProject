@@ -1,5 +1,8 @@
 import Image from "next/image";
 const Productions = () => {
+
+
+
   const styling = {
     backgroundColor: "rgba(77, 73, 73, 0.64)",
    background: "linear-gradient(193deg, rgba(34, 33, 33, 0.91), rgba(77, 73, 73, 0.34) 16%, rgba(88, 87, 87, 0.28)), url('/productions/bg2x.jpg')",
@@ -14,15 +17,15 @@ const Productions = () => {
       <h2 className="text-3xl mb-10  font-bold text-white text-center">
         La nostra produzione
       </h2>
-      <ul className="w-full  block md:flex justify-between items-center mx-auto max-w-max sm:justify-center">
-        <li>
+      <ul className="w-full  block  md:flex justify-between items-center mx-auto max-w-max sm:justify-center">
+        <li >
           {" "}
           <Image
             src="/productions/1.jpg"
             alt="img1"
             width={200}
             height={60}
-            className="md:mr-10"
+            className="mb-2 md:mr-10"
 
           />
         </li>
@@ -33,7 +36,7 @@ const Productions = () => {
             alt="img2"
             width={300}
             height={60}
-            className=" md:mr-10"
+            className="mb-2 md:mr-10"
           />
         </li>
         <li>

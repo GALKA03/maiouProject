@@ -69,7 +69,7 @@ const Garanty = () => {
     
   return (
       <section style={styling} className="">
-      <ul className="max-w-3xl mx-auto py-20 grid grid-cols-4 gap-9">
+      <ul className="max-w-3xl mx-auto py-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-9">
         {garantyItems.map(({ id, src, alt, title, description }) => (
           <li key={id} className="flex justify-center items-center flex-col">
             <Image src={src} alt={alt} width={70} height={70} className=" hover:scale-125 transition duration-500" />

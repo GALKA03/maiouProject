@@ -11,10 +11,10 @@ const Productions = () => {
   };
   return (
     <section style={styling} >
-      <h2 className="text-3xl font-bold text-teal-950 text-center">
+      <h2 className="text-3xl mb-10  font-bold text-white text-center">
         La nostra produzione
       </h2>
-      <ul className=" p-10 flex justify-around items-center">
+      <ul className="w-full  block md:flex justify-between items-center mx-auto max-w-max sm:justify-center">
         <li>
           {" "}
           <Image
@@ -22,7 +22,7 @@ const Productions = () => {
             alt="img1"
             width={200}
             height={60}
-            className="mb-10"
+            className="md:mr-10"
 
           />
         </li>
@@ -33,7 +33,7 @@ const Productions = () => {
             alt="img2"
             width={300}
             height={60}
-            className="mb-10"
+            className=" md:mr-10"
           />
         </li>
         <li>
@@ -41,6 +41,34 @@ const Productions = () => {
           <Image src="/productions/2.jpg" alt="img3" width={200} height={60} />
         </li>
       </ul>
+{/* 
+        <ul className="inline-block text-center  p-10 md:hidden" style={{ margin: '0 auto', display: 'table' }}>
+        <li>
+          {" "}
+          <Image
+            src="/productions/1.jpg"
+            alt="img1"
+            width={200}
+            height={60}
+            className="mb-10 ml-10"
+
+          />
+        </li>
+        <li>
+          {" "}
+          <Image
+            src="/productions/3.jpg"
+            alt="img2"
+            width={300}
+            height={60}
+            className="mb-10 "
+          />
+        </li>
+        <li>
+          {" "}
+          <Image src="/productions/2.jpg" alt="img3" width={200} height={60} className="ml-10" />
+        </li>
+      </ul> */}
     </section>
   );
 };

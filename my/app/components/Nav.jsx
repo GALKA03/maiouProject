@@ -1,4 +1,5 @@
 'use client';
+import { MenuMobil } from "./svgs";
 import Link from "next/link";
 import Image from "next/image";
 const Nav = () => {
@@ -12,7 +13,7 @@ const Nav = () => {
         height={160}
         className="object_contain me-auto animate-pulse"
       /></div>
-      <nav className="text-xl  font-semibold text-cyan-50 w-full h-24 flex flex-wrap justify-center items-center w-8/12">
+      <nav className="hidden text-xl  font-semibold text-cyan-50 w-full h-24 md:flex flex-wrap justify-center items-center w-8/12">
        
             <Link href="/" className="transition duration-500  w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 hover:bg-cyan-900  active:bg-cyan-600,text-teal-200 focus:outline-none  focus:bg-cyan-900">
               HOME
@@ -25,7 +26,7 @@ const Nav = () => {
             <Link href="/contatti" className="transition duration-500 w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 py-40px hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900">CONTATTACI</Link>
           
           </nav>
-    
+    <button className="inline-block text-white mr-4 md:hidden"><MenuMobil/></button>
     </>
   );
 };

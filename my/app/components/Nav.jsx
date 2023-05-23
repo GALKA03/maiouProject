@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { MenuMobil, CloseBtn } from "./svgs";
-
+import { Suspense } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 const Nav = () => {
@@ -18,7 +18,8 @@ const Nav = () => {
           height={160}
           className="hidden md:block object_contain me-auto animate-pulse"
         />
-        </div>
+      </div>
+      
       <nav className="hidden text-xl  font-semibold text-cyan-50 w-full h-24 md:flex flex-wrap justify-center items-center w-8/12">
         <Link
           href="/"

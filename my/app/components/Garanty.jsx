@@ -62,8 +62,8 @@ const Garanty = () => {
       id: 8,
       src: "/garanty/garanty8.png",
       alt: "done all",
-      title: "Gratuito",
-      description: "misurazioni",
+      title: "Misurazioni",
+      description: "Gratuito",
           }
       ]
     

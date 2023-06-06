@@ -1,8 +1,11 @@
 .customLoader {
     width: 80px;
     height: 40px;
-    background: #F1B74C;
-    position: relative;
+    background: #fafafa;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     animation: sh9-0 1.5s infinite linear;
 }
 

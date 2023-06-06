@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Loading from "./loading";
+import { Providers } from "./provider";
 import { Suspense } from 'react';
 export const metadata = {
   title: "Create Next App",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="it">
       <body>
+        < Providers>
         <Suspense fallback={<Loading/>}>
         <div className="w-full h-full">
           <header className=" block md:flex  bg-cyan-800 justify-between">
@@ -38,7 +40,8 @@ export default function RootLayout({ children }) {
           <Footer />
           </footer>
         </div>
-        </Suspense>
+          </Suspense>
+          </Providers>
       </body>
     </html>
   );

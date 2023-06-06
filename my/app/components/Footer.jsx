@@ -27,11 +27,11 @@ const socialMediaIcons = [
         height={150}
         className="object_contain text-center animate-pulse"
                     />
-                <h2 className="text-xl text-white capitalize align-middle break-words">Un'azienda specializzata nell'isolamento dei tubi.</h2>
+                <h2 className="text-xl text-white capitalize align-middle break-words">Isolamento. Efficienza. Sicurezza.</h2>
       </div>
      
       <div className="social-end my-10">
-        <ul className="flex justify-between items-center">
+        <ul className="flex justify-between items-center ">
                {socialMediaIcons.map(({ id, icon, href }) => {
           return (
             <li key={id} className="mr-10">
@@ -49,24 +49,24 @@ const socialMediaIcons = [
           <ul className="footer__list list">
             <li className="footer__item">
               <a
-                href="https://goo.gl/maps/JEW9ovbfu2PFGyKFA"
+                href="https://www.google.com/maps/place/Via+Augusto+Nomis+Di+Cossilla,+23,+10137+Torino+TO/@45.0366039,7.6232565,17z/data=!3m1!4b1!4m6!3m5!1s0x47881337751c6597:0x46c6c43539c5a1d2!8m2!3d45.0366039!4d7.6254452!16s%2Fg%2F11c24vmplz?entry=ttu"
                 target="_blank"
                 rel="noopener nofollow noreferrer"
                 className="flex"
               >
                  
-                 г.Киев, пр-т Леси Украинки,26
+                 Via Augusto Nomis Di Cossilla, 23, 10137 Torino TO
                  <MapPin className="ml-2" />
               </a>
             </li>
-            <li className="footer__item">
-              <a href="mailto:info@devstudio.com" className="footer__mail link">
-                info@devstudio.com
+            <li className="">
+              <a href="mailto:info@devstudio.com" className="">
+                DiZetaCoibentazione@gmail.com
               </a>
             </li>
             <li className="footer__item">
-              <a href="tel:+380961111111" className="footer__tel link">
-                +38 096 111 11 11
+              <a href="tel:+380961111111" className="">
+               +(39)366 5252167
               </a>
             </li>
           </ul>

@@ -4,7 +4,7 @@ import s from "../styles/utils/loader.module.scss"
 const Loading = () => {
     return (
         // <div className="flex justify-center items-center h-screen">  
-        <div style={{ position:"relative"}}>
+        <div style={{ position:"relative" }}>
   <div className={s.customLoader}>Loading...</div>
 </div>
 // </div>

@@ -1,18 +1,22 @@
-import { useEffect } from 'react';
-import Modal from 'react-modal';
-import Image from 'next/image';
-import { galleryItems } from '../api/gallery';
+"use client"
+import Link from "next/link";
+// import { useRouter } from "next/router";
+import  galleryItems  from "@/app/api/gallery";
+import Photo from "@/app/components/frame";
 
-Modal.setAppElement('#__next');
-
-const ModalId = () => {
+const GalleryId = ({ params: { id } }) => {
+ 
+  const photo = galleryItems.find((p)=>p.id===id)
+console.log('[id]photo', photo)
   return (
-    <div>
-      {galleryItems.map(({ src, alt, id }) => (
-        <Image key={id} src={src} alt={alt} width={800} height={600}/>
-      ))}
-    </div>
+    <>
+          <div>
+           <Photo  photo={photo}/>
+          </div>
+      
+</>
   );
-};
+}
 
-export default ModalId;
+export default GalleryId;
+

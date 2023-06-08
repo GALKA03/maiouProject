@@ -1,16 +1,88 @@
-import {Heading} from "../components/Heading"
-import Gallery from "./Gallery"
+"use client"
+import Image from "next/image";
+// import React, { useState } from 'react';
+import Link from "next/link";
+// import galleryItems from "../../gallery"
+import galleryItems from "../api/gallery"
+// import { useRouter,usePathname,useSearchParams } from 'next/navigation';
+// import { useDisclosure, Modal, ModalOverlay, ModalContent, ModalBody, ModalCloseButton } from '@chakra-ui/react';
+// import ModalImg from "../components/ModalImg";
+// import { ImageDetail } from "../components/ImageDetail";
+import Loading from "./loading";
+
+// import { Suspense } from "react";
+
 
 const Progetti = () => {
-    return (
-        <div className="p-10">
-        <Heading /*text='Progects'*/ />
-            <Gallery />
-            </div>
-    )
-   
+//     const router = useRouter();
+//     const pathname = usePathname();
+// const searchParams = useSearchParams();
+    const photos = galleryItems;
+    
+console.log('photos-progettiPage',photos)
+    
+    
+  return (
+    <div className="grid grid-cols-4 gap-4">
+    {/* <Suspense fallback={<Loading />}> */}
+      {photos.map(({id, imageSrc, imageAlt}) => (
+          <Link key={id} href={`/progetti/${id}`}>
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                width={200}
+                height={400}
+                className="image cursor-pointer"
+              />
+          </Link>
+      ))}
+              {/* </Suspense> */}
+    </div>
+  );
 }
-export default Progetti
+
+export default Progetti;
+// const Progetti = () => {
+//  const router = useRouter();
+//   const pathname = usePathname();
+//     const searchParams = useSearchParams();
+//     // const createQueryString = useCallback(
+//     // (id, value) => {
+//     //   const params = new URLSearchParams(searchParams);
+//     //   params.set(id, value);
+ 
+//     //   return params.toString();
+//     // },
+//     // [searchParams],
+//     // );
+//     const imageQuery = searchParams.get('image');
+//   return (
+//       <div className="grid grid-cols-4 gap-4">
+//           {imageQuery && (
+//         <ModalImg
+//                   onClose={() => {() => router.push('/progetti');
+//           }}
+//         >
+//           <ImageDetail image={router.query.image} />
+//         </ModalImg>
+//       )}
+//       {galleryItems.map((item) => (
+//         <div key={item.id} onClick={() => router.push(`/?image=${item.src}`)}>
+//           <Image
+//             src={item.src}
+//             alt={item.alt}
+//             width={200}
+//             height={400}
+//             className="image cursor-pointer"
+//           />
+//         </div>
+//       ))}
+//     </div>
+//     );
+// }
+
+// export default Progetti;
+
 // const express = require('express')
 // const app = express()
 

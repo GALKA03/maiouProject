@@ -3,7 +3,8 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Loading from "./loading";
-import { Providers } from "./provider";
+// import { useSelectedLayoutSegment } from 'next/navigation';
+// import { Providers } from "./provider";
 import { Suspense } from "react";
 export const metadata = {
   title: "Create Next App",
@@ -23,16 +24,15 @@ export default function RootLayout(props) {
   return (
     <html lang="it">
       <body>
-        <Providers>
+        {/* <Providers> */}
           <Suspense fallback={<Loading />}>
             <div className="w-full h-full">
               <header className=" block md:flex  bg-cyan-800 justify-between">
                 <Nav />
               </header>
               <main className="p-0">
-                 {props.children}
-                 {props.modal}
-              
+                {props.children}
+        {props.modal}
               </main>
               <footer
                 style={styling}
@@ -42,7 +42,7 @@ export default function RootLayout(props) {
               </footer>
             </div>
           </Suspense>
-        </Providers>
+        {/* </Providers> */}
       </body>
     </html>
   );

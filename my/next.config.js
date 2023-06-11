@@ -12,5 +12,15 @@ const webpackConfig = (config) => {
 
 module.exports = {
   ...nextConfig,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'example.com',
+        port: '',
+        pathname: '/account123/**',
+      },
+    ],
+  },
   webpack: webpackConfig,
 };

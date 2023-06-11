@@ -3,6 +3,7 @@
     width: 100%;
     gap: 30px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -72,3 +73,15 @@
     line-height: 1;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
 }
+// @media (min-width: 768px) {
+//     .cardContainer {
+//         flex-wrap: wrap;
+//         justify-content: flex-start;
+//     }
+
+//     .card {
+//         width: calc(50% - 15px);
+//         /* Adjust the gap between cards */
+//         margin-bottom: 30px;
+//     }
+// }

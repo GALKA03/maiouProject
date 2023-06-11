@@ -1,13 +1,15 @@
 .customLoader {
     width: 80px;
     height: 40px;
-    background: #fafafa;
+    background-color: #9dc5c3;
+        background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: sh9-0 1.5s infinite linear;
 }
+
 
 .customLoader:before,
 .customLoader:after {

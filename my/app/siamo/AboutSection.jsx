@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import { Suspense } from 'react';
-import Loading from "../loading";
+import Loading from "./loading";
+import Video from "./Video";
 const styling = {
   // backgroundColor: "rgba(77, 73, 73, 0.64)",
   // background: "url('/about/bg2x.jpg')",
@@ -14,27 +15,11 @@ const styling = {
 };
 const AboutSection = () => {
   return (
-    <section
-      style={styling}
-      className=" py-20 flex justify-around items-center"
-    >
-        {/* <Suspense fallback={<Loading />}> */}
-      <div>
-        {/*           
-        < Image src="/about/2.jpg"
-        alt="logo"
-        width={200}
-                    height={60}
-                 className="mb-10"/>
-             < Image src="/about/3.jpg"
-        alt="logo"
-        width={200}
-        height={60} /> */}
-      </div>
+     <section style={styling} className="py-20 flex justify-around items-center">
       <div className="w-9/12 text-white">
         <h2 className="text-3xl font-bold text-center mb-10">Chi siamo</h2>
-
-        <p className=" overflow-visible text-left  indent-7 whitespace-normal text-xl subpixel-antialiased leading-loose font-medium">
+        <Suspense fallback={<Loading />}>
+          <p className="overflow-visible text-left indent-7 whitespace-normal text-xl subpixel-antialiased leading-loose font-medium">
           Siamo un'azienda giovane e dinamica specializzata nell'isolamento di
           tubi. La nostra missione è fornire ai nostri clienti soluzioni
           personalizzate e di alta qualità, utilizzando i migliori materiali
@@ -47,7 +32,11 @@ const AboutSection = () => {
           isogenopak, a seconda delle necessità dei nostri clienti. Questi
           rivestimenti garantiscono una maggiore resistenza alle intemperie e ai
           raggi UV, proteggendo il tubo e il suo isolamento dall'usura del
-          tempo.
+            tempo.
+            </p>
+          <Video />
+           
+           <p className="overflow-visible text-left indent-7 whitespace-normal text-xl subpixel-antialiased leading-loose font-medium">
       {/* <iframe className="w-full h-75 border-none" src="https://www.youtube.com/watch?v=3plaIjk2QTA" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe> */}
         {/* <video
   poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
@@ -76,9 +65,10 @@ const AboutSection = () => {
           i migliori materiali e rivestimenti disponibili. Offriamo soluzioni
           personalizzate e consulenza esperta ai nostri clienti, per garantire
           efficienza energetica, risparmio sui costi e durata nel tempo.
-        </p>
+          </p>
+              </Suspense>
               </div>
-              {/* </Suspense> */}
+         
     </section>
   );
 };

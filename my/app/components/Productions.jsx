@@ -36,14 +36,7 @@ const Productions = () => {
         <div className={s.cardMembers}>Il nostro lavoro</div>
         {/* <h3 className={s.cardEtablish}>Iron Man</h3> */}
       </div>
-          {/* <Image
-            src=""
-            alt="img1"
-            width={200}
-            height={60}
-            className="mb-2 md:mr-10"
-
-              /> */}
+        
         </div>
           <div className={s.card}>
               

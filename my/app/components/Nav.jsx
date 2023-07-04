@@ -40,10 +40,10 @@ const Nav = () => {
           PROGETTI
         </Link>{" "}
         <Link
-          href="/contatti"
+          href="/servizi"
           className="transition duration-500 w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 py-40px hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900"
         >
-          CONTATTACI
+          SERVIZI
         </Link>
       </nav>
       <div className="md:hidden">

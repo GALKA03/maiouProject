@@ -1,33 +1,55 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+
 const Video = () => {
-    const videoRef = useRef(null);
-      useEffect(() => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
     const storedTime = localStorage.getItem('videoTime');
     if (storedTime && videoRef.current) {
       videoRef.current.currentTime = storedTime;
-      videoRef.current.play();
-          }
-     if (videoRef.current) {
-      videoRef.current.pause();
     }
   }, []);
-const handleTimeUpdate = () => {
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.pause();
+        localStorage.setItem('videoTime', videoRef.current.currentTime);
+      }
+    };
+  }, []);
+
+  const handleTimeUpdate = () => {
     if (videoRef.current) {
       localStorage.setItem('videoTime', videoRef.current.currentTime);
     }
   };
-    return (
-        <div>
-        <video ref={videoRef}
-        className="w-full h-auto max-w-full"
-                muted
-                loop
+const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+  return (
+    <div>
+      <video
+        ref={videoRef}
+        className="w-full h-full max-w-full p-6"
+        muted
+        loop
+        playsInline 
         controls
-        onTimeUpdate={handleTimeUpdate}>
-  <source src="/videos/testVideo.mp4" type="video/mp4"/>
-  Your browser does not support the video tag.
-            </video>
-            </div>
-    )
-}
-export default Video
+        onTimeUpdate={handleTimeUpdate}
+        onClick={handlePlay}
+      >
+        <source src="/videos/videoPiping.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
+};
+
+export default Video;

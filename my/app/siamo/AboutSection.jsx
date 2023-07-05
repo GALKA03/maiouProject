@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Suspense } from 'react';
+import { Suspense } from "react";
 import Loading from "./loading";
 import Video from "./Video";
 const styling = {
@@ -15,60 +15,51 @@ const styling = {
 };
 const AboutSection = () => {
   return (
-     <section style={styling} className="py-20 flex justify-around items-center">
+    <section style={styling} className="py-10 flex justify-around items-center">
       <div className="w-9/12 text-white">
         <h2 className="text-3xl font-bold text-center mb-10">Chi siamo</h2>
-        <Suspense fallback={<Loading />}>
-          <p className="overflow-visible text-left indent-7 whitespace-normal text-xl subpixel-antialiased leading-loose font-medium">
-          Siamo un'azienda giovane e dinamica specializzata nell'isolamento di
-          tubi. La nostra missione è fornire ai nostri clienti soluzioni
-          personalizzate e di alta qualità, utilizzando i migliori materiali
-          disponibili sul mercato. I nostri prodotti di isolamento sono
-          realizzati con lana minerale o elastomero in gomma, a seconda delle
-          esigenze specifiche dei nostri clienti. Questi materiali offrono
-          un'alta efficienza termica, riducendo al minimo le dispersioni di
-          calore e contribuendo al risparmio energetico. Inoltre, i nostri
-          prodotti di isolamento sono rivestiti con alluminio, acciaio o
-          isogenopak, a seconda delle necessità dei nostri clienti. Questi
-          rivestimenti garantiscono una maggiore resistenza alle intemperie e ai
-          raggi UV, proteggendo il tubo e il suo isolamento dall'usura del
-            tempo.
-            </p>
-          <Video />
-           
-           <p className="overflow-visible text-left indent-7 whitespace-normal text-xl subpixel-antialiased leading-loose font-medium">
-      {/* <iframe className="w-full h-75 border-none" src="https://www.youtube.com/watch?v=3plaIjk2QTA" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe> */}
-        {/* <video
-  poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
-  width="640"
-  controls
-> */}
-  {/* <source
-    src="http://techslides.com/demos/sample-videos/small.webm"
-    type="video/webm"
-  />
-  <source
-    src="http://techslides.com/demos/sample-videos/small.mp4"
-    type="video/mp4"
-  />
-  <source
-    src="http://techslides.com/demos/sample-videos/small.ogg"
-    type="video/ogg"
-  />
-</video> */}
-                  Il nostro team di esperti offre consulenza personalizzata ai nostri
-          clienti, consigliando loro la soluzione di isolamento più adatta alle
-          loro esigenze. Inoltre, ci impegniamo costantemente nella ricerca e
-          sviluppo di nuove soluzioni di isolamento, per garantire ai nostri
-          clienti la migliore qualità possibile. In sintesi, siamo un'azienda
-          giovane e innovativa che si dedica all'isolamento di tubi utilizzando
-          i migliori materiali e rivestimenti disponibili. Offriamo soluzioni
-          personalizzate e consulenza esperta ai nostri clienti, per garantire
-          efficienza energetica, risparmio sui costi e durata nel tempo.
-          </p>
-              </Suspense>
-              </div>
-         
+        <div className="flex flex-wrap justify-center items-start">
+          <div className="w-full md:w-1/2">
+            <Suspense fallback={<Loading />}>
+              <p className="overflow-visible text-left indent-7 whitespace-normal text-xl subpixel-antialiased leading-loose font-medium">
+                Siamo un'azienda giovane e dinamica specializzata
+                nell'isolamento di tubi. La nostra missione è fornire ai nostri
+                clienti soluzioni personalizzate e di alta qualità, utilizzando
+                i migliori materiali disponibili sul mercato.
+                <br className="mt-2"/> I nostri prodotti
+                di isolamento sono realizzati con lana minerale o elastomero in
+                gomma, a seconda delle esigenze specifiche dei nostri clienti.
+                Questi materiali offrono un'alta efficienza termica, riducendo
+                al minimo le dispersioni di calore e contribuendo al risparmio
+                energetico.   <br /> Inoltre, i nostri prodotti di isolamento sono
+                rivestiti con alluminio, acciaio o isogenopak, a seconda delle
+                necessità dei nostri clienti. Questi rivestimenti garantiscono
+                una maggiore resistenza alle intemperie e ai raggi UV,
+                proteggendo il tubo e il suo isolamento dall'usura del tempo.
+              </p>
+            </Suspense>
+          </div>
+          <div className="w-full md:w-1/2">
+            <Video />
+          </div>
+          <div className="w-full">
+            <Suspense fallback={<Loading />}>
+              <p className="overflow-visible text-left indent-7 whitespace-normal text-xl subpixel-antialiased leading-loose font-medium">
+                Il nostro team di esperti offre consulenza personalizzata ai
+                nostri clienti, consigliando loro la soluzione di isolamento più
+                adatta alle loro esigenze.  <br /> Inoltre, ci impegniamo costantemente
+                nella ricerca e sviluppo di nuove soluzioni di isolamento, per
+                garantire ai nostri clienti la migliore qualità possibile. In
+                sintesi, siamo un'azienda giovane e innovativa che si dedica
+                all'isolamento di tubi utilizzando i migliori materiali e
+                rivestimenti disponibili.   <br />Offriamo soluzioni personalizzate e
+                consulenza esperta ai nostri clienti, per garantire efficienza
+                energetica, risparmio sui costi e durata nel tempo.
+              </p>
+            </Suspense>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

@@ -84,13 +84,13 @@ const galleryItems = [
     title: "Misurazioni",
     description: "Gratuito",
     },
-            {
-    id: "13",
-    imageSrc: "/gallery/piping12x2.jpg",
-    imageAlt: "done all",
-    title: "Misurazioni",
-    description: "Gratuito",
-    },
+            // {
+    // id: "13",
+    // imageSrc: "/gallery/piping12x2.jpg",
+    // imageAlt: "done all",
+    // title: "Misurazioni",
+    // description: "Gratuito",
+    // },
       
 ];
 export default galleryItems

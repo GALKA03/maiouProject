@@ -1,11 +1,21 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from 'next/navigation'
 import { MenuMobil, CloseBtn } from "./svgs";
 import { Suspense } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 const Nav = () => {
   const [navBar, setNavbar] = useState(false);
+  const pathname = usePathname()
+  
+  const navLinks = [
+    { id: 1, title: "HOME", url: "/" },
+    { id: 2, title: "CHI SIAMO", url: "/siamo" },
+    { id: 3, title: "PROGETTI", url: "/progetti" },
+    { id: 4, title: "SERVIZI", url: "/servizi" },
+  
+  ];
 
   return (
     <>
@@ -20,31 +30,16 @@ const Nav = () => {
         />
       </div>
       
-      <nav className="hidden text-xl  font-semibold text-cyan-50 w-full h-24 md:flex flex-wrap justify-center items-center w-8/12">
-        <Link
-          href="/"
-          className="transition duration-500  w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 hover:bg-cyan-900  active:bg-cyan-600,text-teal-200 focus:outline-none  focus:bg-cyan-900"
-        >
-          HOME
-        </Link>
-        <Link
-          href="/siamo"
-          className="transition duration-500 w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900"
-        >
-          CHI SIAMO
-        </Link>{" "}
-        <Link
-          href="/progetti"
-          className="transition duration-500 w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900 "
-        >
-          PROGETTI
-        </Link>{" "}
-        <Link
-          href="/servizi"
-          className="transition duration-500 w-1/4 h-full py-8 flex items-center justify-center hover:text-teal-200 py-40px hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900"
-        >
-          SERVIZI
-        </Link>
+      <nav className="hidden text-cyan-50 text-xl font-semibold w-full h-24 md:flex flex-wrap justify-center items-center">
+        {navLinks.map((link) => {
+          const isActive = pathname === link.url;
+
+          return (
+            <Link href={link.url} key={link.title} className={`transition duration-500 w-1/4 h-full py-8 flex items-center justify-center ${isActive ? 'text-teal-900 bg-cyan-600' : 'text-cyan-50 bg-cyan-800 focus:outline-none focus:bg-cyan-900'}`}>
+                {link.title}
+            </Link>
+          );
+        })}
       </nav>
       <div className="md:hidden">
         <button
@@ -58,37 +53,20 @@ const Nav = () => {
           )}
         </button>
       </div>
-      {navBar && <div className="relative w-full ">
-        <div className=" flex-1 text-cyan-300 pb-3 mt-8 md:hidden">
-          <Link
-            href="/"
-            className=" transition duration-500  h-full py-8 flex items-center justify-center hover:text-white hover:bg-cyan-900  active:bg-cyan-600,text-teal-200 focus:outline-none  focus:bg-cyan-900"
-            onClick={() => setNavbar(!navBar)}
-          >
-            HOME
-          </Link>
-          <Link
-            href="/siamo"
-            className="transition duration-500 h-full py-8 flex items-center justify-center hover:text-white hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900"
-            onClick={() => setNavbar(!navBar)}
-          >
-            CHI SIAMO
-          </Link>{" "}
-          <Link
-            href="/progetti"
-            className="transition duration-500  h-full py-8 flex items-center justify-center hover:text-white hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900 "
-            onClick={() => setNavbar(!navBar)}
-          >
-            PROGETTI
-          </Link>{" "}
-          <Link
-            href="/contatti"
-            className="transition duration-500  h-full py-8 flex items-center justify-center hover:text-white py-40px hover:bg-cyan-900  active:bg-cyan-600 focus:outline-none  focus:bg-cyan-900"
-          >
-            CONTATTACI
-          </Link>
-        </div>
-      </div>}
+{navBar && (
+    <div className="flex-1 text-cyan-300 pb-3 mt-8 md:hidden">
+      {navLinks.map((link) => (
+        <Link
+          key={link.id}
+          href={link.url}
+          className="transition duration-500 h-full py-8 flex items-center justify-center hover:text-white hover:bg-cyan-900 active:bg-cyan-600 focus:outline-none focus:bg-cyan-900"
+          onClick={() => setNavbar(!navBar)}
+        >
+          {link.title}
+        </Link>
+      ))}
+    </div>
+  )}
     </>
   );
 };

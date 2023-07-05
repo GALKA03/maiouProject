@@ -1,9 +1,11 @@
 "use client"
 import React from 'react';
+import Loading from './loading';
 import {serv3} from "../../public/servize/serv3.jpg"
 // import { ExistRequiredError } from '../lib/exceptions';
 // import { Heading } from '../components/Heading';
 import s from "../styles/layout/servizi.module.scss"
+import { Suspense } from 'react'
 const Servizi = () => {
 //   try {
 //     throw new ExistRequiredError();
@@ -16,11 +18,14 @@ const handleTouchStart = (event) => {
   };
 
   return (
+      
    <div className={s.wrapper}>
   <h1 className={s.title}>Ci occupiamo anche di:</h1>
-  <div className={s.cols}>
+      <div className={s.cols}>
+       
+         <Suspense fallback={<Loading/>}> 
 			<div className={s.col} onTouchStart={handleTouchStart}>
-				<div className={s.container}>
+          <div className={s.container}>
 					<div className={s.front} style={{ backgroundImage: `url(/servize/serv5.jpg)` }}>
 						<div className={s.inner}>
 							<p>Coibentazioni skid</p>
@@ -33,7 +38,8 @@ const handleTouchStart = (event) => {
 						</div>
 					</div>
 				</div>
-			</div>
+        </div>
+      </Suspense>
 			<div className={s.col} onTouchStart={handleTouchStart}>
 				<div className={s.container}>
 					<div className={s.front} style={{ backgroundImage: `url(/servize/serv3.jpg)`}}>
@@ -113,7 +119,8 @@ La coibentazione criogenica utilizza materiali ad alte prestazioni per assorbire
 			</div>
 	
 		</div>
- </div>
+      </div>
+    
   );
 };
 

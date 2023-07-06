@@ -5,7 +5,7 @@ const Loading = () => {
 
     return (
         <div className="flex justify-center items-center h-screen">
-      <div className={s.customLoader}>progetti...</div>
+      <div className={s.customLoader}></div>
   </div>)
 };
 

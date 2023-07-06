@@ -20,6 +20,10 @@ const styling = {
   backgroundSize: "cover",
   // padding:"30px",
 };
+const stylingMain = {
+  background:"#303434",
+background: "radial-gradient(circle, rgba(61, 64, 78, 0.959) 0%, rgba(145,145,145,1) 100%)"
+}
 export default function RootLayout(props) {
   return (
     <html lang="it">
@@ -30,7 +34,7 @@ export default function RootLayout(props) {
               <header className=" block md:flex  bg-cyan-800 justify-between">
                 <Nav />
               </header>
-              <main className="p-0">
+              <main className="p-0" style={stylingMain}>
                 {props.children}
         {props.modal}
               </main>

@@ -1,5 +1,5 @@
 import Loading from "../loading";
-import AboutSection from "./AboutSection"
+import AboutSection from "./(components)/AboutSection"
 import { Suspense } from "react";
 const Siamo = () => {
     return (

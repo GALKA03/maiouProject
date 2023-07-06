@@ -1,6 +1,6 @@
 import s from "../styles/layout/footer.module.scss"
 import Image from "next/image";
-import { Facebook,Linkedin,Twitter,Instagram , MapPin} from "./svgs";
+import { Facebook,Linkedin,Twitter,Instagram , MapPin} from "../styles/svgs";
 // npm uninstall expressexport {facebook} from "../../public/SVG/facebook.svg";
  const Footer = () => {
 //     if (!socials) {

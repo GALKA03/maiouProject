@@ -6,14 +6,9 @@ import { Main } from "next/document";
 const Loading = () => {
     return (
 
-  <div className={s.customLoader}>Loading Main...</div>
-
+ <div className="flex justify-center items-center h-screen">
+      <div className={s.customLoader}></div>
+    </div>
 )
 }
 export default Loading
-{/* <div id="loader-container" className={s.loaderContainer}>
-      <div id="loader-circle" className={s.loaderCircle}></div>
-      <div id="loader" className={s.loader}>
-        <div id="circles" className={s.circles}></div>
-      </div>
-    </div> */}

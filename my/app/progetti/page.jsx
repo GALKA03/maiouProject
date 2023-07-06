@@ -1,5 +1,5 @@
 "use client"
-import Link from "next/link";
+import { ExistRequiredError } from "../lib/exceptions";
 import Image from "next/image";
 import galleryItems from "../api/gallery";
 import Lightbox from "yet-another-react-lightbox";
@@ -10,7 +10,9 @@ import Loading from "./loading";
 
 
 
-const Progetti=() =>{
+const Progetti = () => {
+  
+  
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(-1);
 

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { usePathname } from 'next/navigation'
-import { MenuMobil, CloseBtn } from "./svgs";
+import { MenuMobil, CloseBtn } from "../styles/svgs";
 import { Suspense } from 'react';
 import Link from "next/link";
 import Image from "next/image";

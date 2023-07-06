@@ -7,12 +7,7 @@ import {serv3} from "../../public/servize/serv3.jpg"
 import s from "../styles/layout/servizi.module.scss"
 import { Suspense } from 'react'
 const Servizi = () => {
-//   try {
-//     throw new ExistRequiredError();
-//   } catch (error) {
-//     // Handle the error, e.g., display an error message or log it
-//     console.error(error);
-//   }
+
 const handleTouchStart = (event) => {
     event.currentTarget.classList.toggle('hover');
   };

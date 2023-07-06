@@ -10,9 +10,9 @@ const Video = () => {
     }
   }, []);
 
-  useEffect(() => {
+   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play();
+      videoRef.current.pause();
     }
 
     return () => {
@@ -37,7 +37,7 @@ const handlePlay = () => {
     <div>
       <video
         ref={videoRef}
-        className="w-full h-full max-w-full p-6"
+        className="w-[450px] h-[550px] max-w-full p-6 ml-auto"
         muted
         loop
         playsInline 

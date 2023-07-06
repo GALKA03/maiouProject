@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Suspense } from "react";
-import Loading from "./loading";
+import Loading from "../loading";
 import Video from "./Video";
 const styling = {
   // backgroundColor: "rgba(77, 73, 73, 0.64)",
@@ -21,21 +21,23 @@ const AboutSection = () => {
         <div className="flex flex-wrap justify-center items-start">
           <div className="w-full md:w-1/2">
             <Suspense fallback={<Loading />}>
-              <p className="overflow-visible text-left indent-7 whitespace-normal text-xl subpixel-antialiased leading-loose font-medium">
+              <p className="overflow-visible text-left indent-8 whitespace-normal text-xl subpixel-antialiased leading-loose font-medium">
                 Siamo un'azienda giovane e dinamica specializzata
                 nell'isolamento di tubi. La nostra missione è fornire ai nostri
                 clienti soluzioni personalizzate e di alta qualità, utilizzando
                 i migliori materiali disponibili sul mercato.
-                <br className="mt-2"/> I nostri prodotti
+                 <p>I nostri prodotti
                 di isolamento sono realizzati con lana minerale o elastomero in
                 gomma, a seconda delle esigenze specifiche dei nostri clienti.
                 Questi materiali offrono un'alta efficienza termica, riducendo
                 al minimo le dispersioni di calore e contribuendo al risparmio
-                energetico.   <br /> Inoltre, i nostri prodotti di isolamento sono
+                  energetico.</p>
+                <p>Inoltre, i nostri prodotti di isolamento sono
                 rivestiti con alluminio, acciaio o isogenopak, a seconda delle
-                necessità dei nostri clienti. Questi rivestimenti garantiscono
+                  necessità dei nostri clienti.</p>
+                <p>Questi rivestimenti garantiscono
                 una maggiore resistenza alle intemperie e ai raggi UV,
-                proteggendo il tubo e il suo isolamento dall'usura del tempo.
+                proteggendo il tubo e il suo isolamento dall'usura del tempo.</p>
               </p>
             </Suspense>
           </div>
@@ -47,14 +49,15 @@ const AboutSection = () => {
               <p className="overflow-visible text-left indent-7 whitespace-normal text-xl subpixel-antialiased leading-loose font-medium">
                 Il nostro team di esperti offre consulenza personalizzata ai
                 nostri clienti, consigliando loro la soluzione di isolamento più
-                adatta alle loro esigenze.  <br /> Inoltre, ci impegniamo costantemente
+                adatta alle loro esigenze.  <p>Inoltre, ci impegniamo costantemente
                 nella ricerca e sviluppo di nuove soluzioni di isolamento, per
                 garantire ai nostri clienti la migliore qualità possibile. In
                 sintesi, siamo un'azienda giovane e innovativa che si dedica
                 all'isolamento di tubi utilizzando i migliori materiali e
-                rivestimenti disponibili.   <br />Offriamo soluzioni personalizzate e
+                  rivestimenti disponibili. </p>
+                <p>Offriamo soluzioni personalizzate e
                 consulenza esperta ai nostri clienti, per garantire efficienza
-                energetica, risparmio sui costi e durata nel tempo.
+                energetica, risparmio sui costi e durata nel tempo.</p>
               </p>
             </Suspense>
           </div>

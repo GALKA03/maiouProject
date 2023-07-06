@@ -52,19 +52,19 @@ const socialMediaIcons = [
                 href="https://www.google.com/maps/place/Via+Augusto+Nomis+Di+Cossilla,+23,+10137+Torino+TO/@45.0366039,7.6232565,17z/data=!3m1!4b1!4m6!3m5!1s0x47881337751c6597:0x46c6c43539c5a1d2!8m2!3d45.0366039!4d7.6254452!16s%2Fg%2F11c24vmplz?entry=ttu"
                 target="_blank"
                 rel="noopener nofollow noreferrer"
-                className="flex"
+                className="flex hover:text-indigo-600"
               >
                  
                  Via Augusto Nomis Di Cossilla, 23, 10137 Torino TO
-                 <MapPin className="ml-2" />
+                 <MapPin className="ml-2  hover:text-indigo-600" />
               </a>
             </li>
             <li className="">
-              <a href="mailto:info@devstudio.com" className="">
+              <a href="mailto:info@devstudio.com" className=" hover:text-indigo-600">
                 DiZetaCoibentazione@gmail.com
               </a>
             </li>
-            <li className="footer__item">
+            <li className="footer__item  hover:text-indigo-600">
               <a href="tel:+380961111111" className="">
                +(39)366 5252167
               </a>

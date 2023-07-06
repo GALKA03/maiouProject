@@ -7,7 +7,7 @@ import "yet-another-react-lightbox/styles.css";
 import { useState } from "react";
 import { Suspense } from "react";
 import Loading from "./loading";
-
+import ScrollUpBtn from "../components/ScrollUp";
 
 
 const Progetti = () => {
@@ -34,7 +34,7 @@ const Progetti = () => {
   });
 
   return (
-    <>
+    <div className="flex justify-center">
       <div className="p-4 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
         {columns.map((column, columnIndex) => (
           <div key={columnIndex} className="grid gap-4">
@@ -61,26 +61,12 @@ const Progetti = () => {
        slides={galleryItems.map(({ imageSrc }) => ({ src: imageSrc }))}
         index={index}
       />
-    </>
+      <ScrollUpBtn />
+    </div >
+      
   );
 }
 export default Progetti
-  //  <div className="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-  //     {progetti.map(({ id, imageSrc }) => (
-  //         <div key={id}>
-  //         <Link /*key={id}*/ href={`/progetti/${id}`}>
-  //         <div className="relative max-w-xs overflow-hidden bg-cover w-full aspect-square overflow-hidden rounded-lg">
-  //           <img
-  //             alt=""
-  //             src={imageSrc}
-  //             // height={200}
-  //             // width={400}
-  //             className=" w-full object-cover aspect-square h-auto max-w-full rounded-lg  transition duration-300 ease-in-out hover:scale-110 "
-  //             />
-  //             </div>
-  //           </Link>
-  //         </div>
-  //       ))}
-  //     </div>
+ 
 
 

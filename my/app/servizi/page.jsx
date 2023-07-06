@@ -1,11 +1,10 @@
 "use client"
 import React from 'react';
 import Loading from './loading';
-import {serv3} from "../../public/servize/serv3.jpg"
-// import { ExistRequiredError } from '../lib/exceptions';
-// import { Heading } from '../components/Heading';
 import s from "../styles/layout/servizi.module.scss"
 import { Suspense } from 'react'
+import ScrollUpBtn from '../components/ScrollUp';
+
 const Servizi = () => {
 
 const handleTouchStart = (event) => {
@@ -113,7 +112,8 @@ La coibentazione criogenica utilizza materiali ad alte prestazioni per assorbire
 				</div>
 			</div>
 	
-		</div>
+		  </div>
+		  <ScrollUpBtn />
       </div>
     
   );

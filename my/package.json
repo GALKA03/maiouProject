@@ -11,6 +11,7 @@
   "dependencies": {
     "@svgr/cli": "^8.0.1",
     "@svgr/webpack": "^8.0.1",
+    "aos": "^2.3.4",
     "autoprefixer": "10.4.14",
     "next": "^13.4.4",
     "postcss": "8.4.23",

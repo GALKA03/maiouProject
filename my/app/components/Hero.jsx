@@ -26,7 +26,7 @@ const Hero = () => {
                 // placeholder="blur" 
                 />
                    {/* </div> */}
-                <h2 className="text-2xl text-white capitalize align-middle break-words">Isolamento. Efficienza. Sicurezza.</h2>
+                <h2 className="text-2xl text-white text-center capitalize align-middle break-words">Isolamento. Efficienza. Sicurezza.</h2>
       </div>
         </section>
        

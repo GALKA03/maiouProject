@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import { ErrorSvg } from "../styles/svgs";
+import { ErrorSvg } from "../../public/svgs";
 import s from "../styles/utils/errorPage.module.scss"
 
 

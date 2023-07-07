@@ -1,6 +1,6 @@
 import s from "../styles/layout/footer.module.scss"
 import Image from "next/image";
-import { Facebook,Linkedin,Twitter,Instagram , MapPin} from "../styles/svgs";
+import { Facebook,Linkedin,Twitter,Instagram , MapPin} from "../../public/svgs";
 // npm uninstall expressexport {facebook} from "../../public/SVG/facebook.svg";
  const Footer = () => {
 //     if (!socials) {
@@ -46,20 +46,20 @@ const socialMediaIcons = [
         <div className="footer-conteiner__contacts">
   
         <address className="my-10 text-sm">
-          <ul className="footer__list list">
-            <li className="footer__item">
+          <ul className="footer__list list text-sm">
+            <li className=" mb-2">
               <a
                 href="https://www.google.com/maps/place/Via+Augusto+Nomis+Di+Cossilla,+23,+10137+Torino+TO/@45.0366039,7.6232565,17z/data=!3m1!4b1!4m6!3m5!1s0x47881337751c6597:0x46c6c43539c5a1d2!8m2!3d45.0366039!4d7.6254452!16s%2Fg%2F11c24vmplz?entry=ttu"
                 target="_blank"
                 rel="noopener nofollow noreferrer"
-                className="flex hover:text-indigo-600"
+                className="flex flex-wrap justify-center hover:text-indigo-600"
               >
                  
                  Via Augusto Nomis Di Cossilla, 23, 10137 Torino TO
-                 <MapPin className="ml-2  hover:text-indigo-600" />
+                 <MapPin className="ml-2 text-yellow-500 hover:text-indigo-600" />
               </a>
             </li>
-            <li className="">
+            <li className="mb-2">
               <a href="mailto:info@devstudio.com" className=" hover:text-indigo-600">
                 DiZetaCoibentazione@gmail.com
               </a>

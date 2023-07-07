@@ -68,12 +68,12 @@ const Garanty = () => {
       ]
     
   return (
-      <section style={styling} className="">
+      <section style={styling} className="px-4">
       <ul className="max-w-3xl mx-auto py-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-9">
         {garantyItems.map(({ id, src, alt, title, description }) => (
           <li key={id} className="flex justify-center items-center flex-col">
             <Image src={src} alt={alt} width={70} height={70} className=" hover:scale-125 transition duration-500" />
-            <h3 className="text-cyan-900 text-xl font-bold">{title}</h3>
+            <h3 className="text-cyan-900 text-xl text-center font-bold">{title}</h3>
             <p>{description}</p>
           </li>
         ))}

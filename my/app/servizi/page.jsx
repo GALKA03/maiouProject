@@ -91,7 +91,7 @@ La coibentazione criogenica utilizza materiali ad alte prestazioni per assorbire
 					</div>
 					<div className={s.back}>
 						<div className={s.inner}>
-							<p>Il poliuretano è un isolante prodotto in loco tramite macchina ad alta pressione. Si inietta nel preformato di alluminio, prefabbricato nella nostra officina. È utilizzato nell'industria per isolare serbatoi e impianti di refrigerazione, e nell'edilizia per pavimenti, pareti, terrazze, soffitti, tetti e mansarde. Garantisce eccellente resistenza termica e acustica, riducendo dispersioni di calore e rumore esterno. Versatile, facile da installare e durevole, migliora l'efficienza energetica e il comfort degli ambienti industriali e domestici.</p>
+							<p>Il poliuretano è un isolante versatile utilizzato nell'industria e nell'edilizia. È iniettato nei preformati di alluminio per isolare serbatoi e impianti di refrigerazione. Offre eccellente resistenza termica e acustica, riducendo dispersioni di calore e rumore. Migliora l'efficienza energetica e il comfort degli ambienti industriali e domestici.</p>
 						</div>
 					</div>
 				</div>

@@ -18,7 +18,7 @@ const socialMediaIcons = [
    return (
     <>
      {/* <div className="py-20 flex  p-10 justify-around items-center flex-wrap text-white text-lg"> */}
-       <div className="flex flex-col justify-center items-center my-10">
+       <div className="flex flex-col flex-wrap justify-center items-center my-10">
                 
                 <Image          
         src="/logo.png"
@@ -30,11 +30,11 @@ const socialMediaIcons = [
                 <h2 className="text-xl text-white capitalize align-middle break-words">Isolamento. Efficienza. Sicurezza.</h2>
       </div>
      
-      <div className="social-end my-10">
-        <ul className="flex justify-between items-center ">
+      <div className="social-end my-10 w-[200px]">
+        <ul className="w-[200px] flex  justify-center  md:justify-between items-center">
                {socialMediaIcons.map(({ id, icon, href }) => {
           return (
-            <li key={id} className="mr-10">
+            <li key={id} className="mr-2">
               <a href={href} className={s.link_bg}>
                 {icon}
               </a>
@@ -45,7 +45,7 @@ const socialMediaIcons = [
        </div>
         <div className="footer-conteiner__contacts">
   
-        <address className="my-10">
+        <address className="my-10 text-sm">
           <ul className="footer__list list">
             <li className="footer__item">
               <a

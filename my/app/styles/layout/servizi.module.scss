@@ -1,5 +1,5 @@
 h1.title{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-family: 'Montserrat';
     font-weight: normal;
     color: #444;
@@ -111,12 +111,16 @@ h1.title{
     transform-style: preserve-3d;
 }
 
+// .front .inner p {
+//     font-size: 2rem;
+//     margin-bottom: 2rem;
+//     position: relative;
+// }
 .front .inner p {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     position: relative;
 }
-
 .front .inner p:after {
     content: '';
     width: 4rem;
@@ -140,6 +144,7 @@ h1.title{
     .col {
         width: calc(50% - 2rem);
     }
+       
 }
 
 @media screen and (max-width: 48rem) {
@@ -147,6 +152,15 @@ h1.title{
         width: calc(100% - 2rem);
         margin: 0 0 2rem 0;
     }
+         h1.title {
+             font-size: 2.5rem;
+         }
+    
+         .front,
+         .back {
+             min-height: 500px;
+             height: auto
+         }
 }
 
 // @media screen and (max-width: 32rem) {

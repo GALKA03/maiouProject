@@ -28,7 +28,7 @@ const handleTouchStart = (event) => {
 					</div>
 					<div className={s.back}>
 						<div className={s.inner}>
-						  <p>La coibentazione con moduli Skid è una soluzione comune nell'industria petrolifera e petrolchimica per l'isolamento di impianti ad alta e bassa temperatura. Gli skid offrono un'alternativa efficiente alla costruzione tradizionale, in cui le parti del sistema vengono spedite e installate separatamente. Materiali come la lana di roccia, la lana di vetro e la fibroceramica vengono utilizzati per questa lavorazione.</p>
+						  <p>La coibentazione con moduli Skid è una pratica comune nell'industria petrolifera e petrolchimica per isolare impianti a diverse temperature. Gli skid offrono un'alternativa efficiente alla costruzione tradizionale, spedendo e installando separatamente le parti del sistema. Vengono utilizzati materiali come la lana di roccia, la lana di vetro e la fibroceramica per questa lavorazione.</p>
 						</div>
 					</div>
 				</div>
